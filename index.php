@@ -464,7 +464,7 @@ try {
 <body>
     <!-- Шапка сайта -->
     <header class="site-header">
-        <h1><i class="fas fa-book" style="margin-right: 15px"></i>Дорогой дневник...</h1>
+        <h1><i class="fas fa-book" style="margin-right: 15px"></i>My notebook</h1>
     </header>
 
     <!-- Основная навигация -->
@@ -479,7 +479,7 @@ try {
 
     <!-- Подвал сайта -->
     <footer class="site-footer">
-        <p>© 2025 Записная книжка • Сделано с 🤍</p>
+        <p>© 2025 Записная книжка</p>
     </footer>
 </body>
 
