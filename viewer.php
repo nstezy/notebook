@@ -65,6 +65,14 @@ function render_viewer(PDO $db, string $sort, int $page): string
         $html .= '<td>' . htmlspecialchars($r['firstname']) . '</td>';   // имя
         $html .= '<td>' . htmlspecialchars($r['patronymic']) . '</td>';  // отчество
         $html .= '<td>' . htmlspecialchars($r['gender']) . '</td>';      // пол
+        // Форматируем дату из YYYY-MM-DD в DD.MM.YYYY
+        if (!empty($r['dob'])) {
+            $date = DateTime::createFromFormat('Y-m-d', $r['dob']);
+            $dobFormatted = $date ? $date->format('d.m.Y') : '';
+        } else {
+            $dobFormatted = '';
+        }
+        $html .= '<td>' . htmlspecialchars($dobFormatted) . '</td>';
         $html .= '<td>' . htmlspecialchars($r['dob']) . '</td>';         // дата рождения
         $html .= '<td>' . htmlspecialchars($r['phone']) . '</td>';       // телефон
         $html .= '<td>' . htmlspecialchars($r['address']) . '</td>';     // адрес

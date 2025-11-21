@@ -46,7 +46,7 @@ function render_delete(PDO $db): string
 
     // Формируем ссылки для удаления каждой записи
     foreach ($list as $r) {
-        // Формируем инициалы имени и отчества по ТЗ
+        // Формируем инициалы имени и отчества
         $initials = mb_substr($r['firstname'], 0, 1) . '.';
         if (!empty($r['patronymic'])) {
             $initials .= mb_substr($r['patronymic'], 0, 1) . '.';
